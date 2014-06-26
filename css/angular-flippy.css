@@ -9,9 +9,25 @@ flippy {
     perspective: 600px;
     cursor: pointer;
     width: 98%;
-    max-width: 400px;
-    height: 420px;
-    max-height: 420px;
+    max-width: 190px;
+    height: 220px;
+    max-height: 220px;
+}
+
+@media(min-width:450px) {
+    flippy {
+        max-width: 300px;
+        height: 330px;
+        max-height: 330px;
+    }
+}
+
+@media(min-width:725px) {
+    flippy {
+        max-width: 400px;
+        height: 420px;
+        max-height: 420px;
+    }
 }
 flippy img {
     height: 100%;

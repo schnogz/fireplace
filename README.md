@@ -4,9 +4,9 @@
 About
 ========
 
-This is a web based application that manages a users book library.  The book searching within the application is powered by the Google Book API.  A users library and wishlist is currently stored using HTML5's localstorage feature.  Eventually, I would like to implement Google's OAuth within the application.  This would allow to read and write to a user's Google Play Book Library.
+This is a web based application that manages a users book library.  The book searching within the application is powered by the Google's [Book API](https://developers.google.com/books/docs/v1/using).  Users libraries and wishlists are currently stored using HTML5's localStorage feature.  Eventually, I would like to implement Google's OAuth within the application.  This would allow to read and write to a user's Google Play Book Library.
 
-The main user facing technologies used in this project are AngularJs, Twitter Bootstrap, and jQuery. Application developement, and it's processes, are supported by Node.js (Grunt, Karma, ngTemplates) and the Lo-Dash JavaScript utility library.
+The main user facing technologies used in this project are AngularJs, Twitter Bootstrap, and jQuery. Application development, and it's processes, are supported by Node.js (Grunt, Karma, ngTemplates) and the Lo-Dash JavaScript utility library.
 
 Demo
 =======
@@ -25,7 +25,7 @@ Preparing The Dev Environment
 Developing
 ========
 
-* Run grunt -watch from a command prompt within (root)/js.  This will automically `lint` your javascript, run `ngTemplates` to build an Angular's template cache file (templates.js), and then `concat` all necessary files into one. This will happen automatically after any filechange within the (root)/js directory.  
+* Run grunt -watch from a command prompt within (root)/js.  This will automatically `lint` your javascript, run `ngTemplates` to build an Angular's template cache file (templates.js), and then `concat` all necessary files into one. This will happen automatically after any file change within the (root)/js directory.  
 * Refreshing the browser after the watch task is complete will allow you to see your changes.
 
 

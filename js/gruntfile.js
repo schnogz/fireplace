@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 
         // grunt-watch configuration
         watch: {
-            files: ['app/**/*.js', 'app/**/*.html'],
+            files: ['./app/**/*.js', 'app/**/*.html'],
             tasks: ['clean:pre', 'ngtemplates:fireplace', 'concat', 'clean:post']
         },
 
