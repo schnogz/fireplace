@@ -23,6 +23,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-loadnpmtasks": "^0.3.2",
     "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-clean": "^0.5.0"
+    "grunt-contrib-clean": "^0.5.0",
+    "karma-jasmine": "^0.1.5",
+    "karma-script-launcher": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4"
   }
 }

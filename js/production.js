@@ -1,13 +1,13 @@
 angular.module("fireplace", ["ngRoute", "ui.bootstrap", "angular-flippy", "ngEnter"])
     .config(["$routeProvider", function ($routeProvider) {
         $routeProvider.when("/home", {
-            templateUrl: "js/app/search/searchTemplate.html",
+            templateUrl: "search/searchTemplate.html",
             controller: "searchController"
         }).when("/library", {
-            templateUrl: "js/app/library/libraryTemplate.html",
+            templateUrl: "library/libraryTemplate.html",
             controller: "libraryController"
-        }).when("/bucketlist", {
-            templateUrl: "js/app/wishlist/wishlistTemplate.html",
+        }).when("/wishlist", {
+            templateUrl: "wishlist/wishlistTemplate.html",
             controller: "wishlistController"
         }).otherwise({
             redirectTo: "/home"
@@ -137,7 +137,7 @@ angular.module("fireplace").directive("bookCover", function () {
     return {
         restrict: "E",
         replace: true,
-        templateUrl: 'js/app/shared/bookCoverTemplate.html'
+        templateUrl: 'shared/bookCoverTemplate.html'
     };
 });
 angular.module('fireplace').factory('bookService', [ "$http", '$rootScope', "$location", function ($http, $rootScope, $location) {
@@ -286,7 +286,7 @@ angular.module('fireplace').run(['$templateCache', function($templateCache) {
     "\n" +
     "    <div class=\"row\">\r" +
     "\n" +
-    "        <div ng-if=\"books.length === 0\" class=\"col-md-8 col-md-offset-2 text-center well well-lg h3\">Your library is currently empty!</div>\r" +
+    "        <div ng-if=\"books.length === 0\" class=\"col-md-8 col-md-offset-2 text-center well well-lg h3\">Library is currently empty.</div>\r" +
     "\n" +
     "\r" +
     "\n" +
@@ -503,7 +503,7 @@ angular.module('fireplace').run(['$templateCache', function($templateCache) {
     "\n" +
     "    <div class=\"row\">\r" +
     "\n" +
-    "        <div ng-if=\"books.length === 0\" class=\"col-md-8 col-md-offset-2 text-center well well-lg h3\">Your wishlist is currently empty!</div>\r" +
+    "        <div ng-if=\"books.length === 0\" class=\"col-md-8 col-md-offset-2 text-center well well-lg h3\">Wishlist is currently empty.</div>\r" +
     "\n" +
     "\r" +
     "\n" +

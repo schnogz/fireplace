@@ -80,16 +80,11 @@ module.exports = function (grunt) {
         karma: {
             unit: {
                 configFile: 'karma.conf.js',
-                browsers: ['Chrome', 'Firefox', 'IE'],
+                browsers: ['PhantomJS'],
                 singleRun: true,
-                reporters: [
-                    'progress',
-                ],
                 plugins: [
                     'karma-jasmine',
-                    'karma-chrome-launcher',
-                    'karma-firefox-launcher',
-                    'karma-ie-launcher'
+                    'karma-phantomjs-launcher'
                 ]
             }
         }
@@ -98,15 +93,13 @@ module.exports = function (grunt) {
     // These plugins provide necessary tasks.
     require('grunt-loadnpmtasks').extend(grunt);
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    //grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-angular-templates');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default tasks to run
-   // grunt.registerTask('default', ['clean:pre', 'jshint', 'ngtemplates:weatherApp', 'concat', 'karma', 'clean:post']);
-
-    grunt.registerTask('default', ['clean:pre', 'jshint', 'ngtemplates:fireplace', 'concat', 'clean:post']);
+    grunt.registerTask('default', ['clean:pre', 'jshint', 'ngtemplates:fireplace', 'concat', 'karma', 'clean:post']);
 };
