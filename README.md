@@ -14,27 +14,26 @@ Demo
 View the applications demo at http://www.schnogz.com/projects/fireplace/index.html
 
 
-Preparing Your Dev Environment
+Preparing The Dev Environment
 ========
 
-* Install [Node.js](http://nodejs.org/)
-* Install global dev dependencies: `npm install -g grunt-cli`
-* Install local dev dependencies: `npm install` while current directory is (root)/js
+* Install [Node.js](http://nodejs.org/).
+* Install global dev dependencies: `npm install -g grunt-cli`.
+* Install local dev dependencies: `npm install` while current directory is (root)/js.
 
-Build
-========
-
-* Build the whole project: `grunt` - this will run `lint`, `test`, and `concat` targets
 
 Developing
 ========
 
-* Run grunt -watch from a command prompt within (root)/js.  This will automically `lint` your javascript, run `ngTemplates` to build an Angular's template cache file (templates.js), and then `concat` all necessary files into one. This will happen automatically after any filechange within the (root)/js directory.  Refreshing the browser after the watch task is complete will allow you to see your changes.
+* Run grunt -watch from a command prompt within (root)/js.  This will automically `lint` your javascript, run `ngTemplates` to build an Angular's template cache file (templates.js), and then `concat` all necessary files into one. This will happen automatically after any filechange within the (root)/js directory.  
+* Refreshing the browser after the watch task is complete will allow you to see your changes.
 
-Checking in code
+
+Preparing Code For Checkin
 ========
 
-* Once you have changes that you would like to commit, run grunt from a command prompt within web-app/js. This will `clean` old files, `lint` the JavaScript, build `ngTemplate` cache, `concat`, and then run `unit tests`.  If this completes without errors, you're ready for checkin.
+* Once you have changes that you would like to commit, run grunt from a command prompt within (root)/js. This will `clean` old files, `lint` the JavaScript, build `ngTemplate` cache, `concat`, and then run `unit tests`.  If this completes without errors, you're code is ready for checkin.
+
 
 License
 ========
