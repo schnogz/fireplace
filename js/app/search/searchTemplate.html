@@ -1,0 +1,54 @@
+<section class="intro" ng-show="results.length === 0">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">Fireplace</h1>
+                    <p class="intro-text" >A book manager powered by Google.</p>
+                    <div class="containerSpace">
+                        <div class="custom-search-form">
+                            <input type="text" class="form-control" ng-model="userSearch" ng-enter="submitSearch()" placeholder="Enter a book title, author, or ISBN">
+                        </div>
+                        <div class="col-md-8 col-md-offset-2 alert alert-dismissable text-center {{msgToUser.cssClass}} marginTop15" ng-show="msgToUser.message">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ msgToUser.message }}
+                        </div>
+                        <div class="col-md-12 marginTop15">
+                            <a href="" class="btn btn-circle" ng-click="submitSearch()">
+                                <i class="glyphicon glyphicon-fire accentColor" style="margin-left: -3px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container containerSpace" ng-hide="results.length === 0">
+    <div class="row" style="margin: 5px;">
+        <div class="col-md-8 col-md-offset-2 alert alert-dismissable text-center {{msgToUser.cssClass}} marginTop15" ng-show="msgToUser.message">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ msgToUser.message }}
+        </div>
+        <div class="col-md-6 text-center">
+            <h3>Search Results for <em>"{{ lastSearch }}"</em></h3>
+        </div>
+        <div class="col-md-6">
+            <div class="input-group custom-search-form">
+                <input type="text" class="form-control" ng-model="userSearch" ng-enter="submitSearch()" placeholder="Enter a book title, author, or ISBN">
+                <span class="input-group-btn" ng-click="submitSearch()">
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3 pageTitle" ng-repeat="book in results">
+            <book-cover bookData="book"></book-cover>
+        </div>
+    </div>
+</div>

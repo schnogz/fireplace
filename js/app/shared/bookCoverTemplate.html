@@ -1,0 +1,32 @@
+<flippy data-click-toggle="true" data-mouseover-toggle="true">
+    <flippy-front>
+        <img ng-src="{{ book.volumeInfo.imageLinks.thumbnail }}">
+    </flippy-front>
+    <flippy-back>
+        <div class="thumbnail marginBottomClear">
+            <div class="caption">
+                <h4 class="marginBottom10">{{ book.volumeInfo.title }}</h4>
+                <h5 class="marginBottom10"><em>{{ book.volumeInfo.authors[0] }}</em></h5>
+                <div class="bookInfoContainer">
+                    <p class="h5"><strong>Genre: </strong> {{ book.volumeInfo.categories[0] }} </p>
+                    <p class="h5 bookDescription">{{ book.volumeInfo.description }}</p>
+                </div>
+                <p class="marginBottom10">
+                    <a ng-href="{{ book.volumeInfo.infoLink }}" target="_blank" class="btn btn-default" role="button">More Info</a>
+                    <a ng-href="{{ book.volumeInfo.previewLink }}" target="_blank" class="btn btn-default" role="button">Preview</a>
+                </p>
+                <div ng-if='$parent.currentPage === "search"'>
+                    <a ng-href="" target="_blank" class="btn btn-success btn-block" role="button" ng-click="addBookToLibrary(book)">Add to Library</a>
+                    <a ng-href="" target="_blank" class="btn btn-info btn-block" role="button" ng-click="addBookToWishlist(book)">Add to Wishlist</a>
+                </div>
+                <div ng-if='$parent.currentPage === "library"'>
+                    <a ng-href="" target="_blank" class="btn btn-danger btn-block" role="button" ng-click="removeBookFromLibrary(book)">Remove From Library</a>
+                </div>
+                <div ng-if='$parent.currentPage === "wishlist"'>
+                    <a ng-href="" target="_blank" class="btn btn-success btn-block" role="button" ng-click="addBookToLibrary(book)">Add to Library</a>
+                    <a ng-href="" target="_blank" class="btn btn-danger btn-block" role="button" ng-click="removeBookFromWishlist(book)">Remove From Wishlist</a>
+                </div>
+            </div>
+        </div>
+    </flippy-back>
+</flippy>

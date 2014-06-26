@@ -1,0 +1,28 @@
+{
+  "copyright": "copyright 2014",
+  "license": "proprietary",
+  "private": true,
+  "name": "Fireplace",
+  "description": "Fireplace's package.json file",
+  "version": "0.0.1",
+  "keywords": [],
+  "main": "Gruntfile.js",
+  "author": {
+    "name": "Andrew Schneider",
+    "email": "andrew.mark.schneider@gmail.com"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "karma": "^0.12.16",
+    "grunt-karma": "^0.8.3",
+    "grunt-angular-templates": "^0.5.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-loadnpmtasks": "^0.3.2",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-clean": "^0.5.0"
+  }
+}

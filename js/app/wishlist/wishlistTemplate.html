@@ -1,0 +1,18 @@
+<div class="container containerSpace">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 alert alert-dismissable text-center {{ msgToUser.cssClass }} marginTop15" ng-show="msgToUser.message">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ msgToUser.message }}
+        </div>
+        <div class="col-md-12">
+            <h1 class="text-center accentColor">My Wishlist</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-if="books.length === 0" class="col-md-8 col-md-offset-2 text-center well well-lg h3">Your wishlist is currently empty!</div>
+
+        <div class="col-xs-12 col-sm-4 col-md-3 pageTitle" ng-repeat="book in books">
+            <book-cover bookData="book"></book-cover>
+        </div>
+    </div>
+</div>
