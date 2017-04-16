@@ -8,11 +8,6 @@ This is a web based application that manages a users book library.  The book sea
 
 The main user facing technologies used in this project are AngularJs, Twitter Bootstrap, and jQuery. Application development, and it's processes, are supported by Node.js (Grunt, Karma, ngTemplates) and the Lo-Dash JavaScript utility library.
 
-Demo
-=======
-
-View the applications demo at http://www.schnogz.com/projects/fireplace/index.html
-
 
 Preparing The Dev Environment
 ========
@@ -33,6 +28,18 @@ Preparing Code For Checkin
 ========
 
 * Once you have changes that you would like to commit, run grunt from a command prompt within (root)/js. This will `clean` old files, `lint` the JavaScript, build `ngTemplate` cache, `concat`, and then run `unit tests`.  If this completes without errors, you're code is ready for checkin.
+
+
+Demo
+=======
+
+View the applications demo at http://www.schnogz.com/projects/fireplace/index.html
+
+
+Screenshot
+=======
+
+![app screenshot](https://cloud.githubusercontent.com/assets/6364918/25072379/3b38c9fc-2292-11e7-8be9-f81b96aa302a.png)
 
 
 License
